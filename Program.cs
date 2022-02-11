@@ -11,13 +11,14 @@ namespace UserRegistrationProject
         static void Main(string[] args)
         {
             Console.WriteLine("hello welcome to user Registration");
+
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
-                    "\n3. Validate EmailID \n4.MobileFormat \n5.Validate Password \n6. Exit");
-                int option = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
+                    "\n3.Validate EmailID \n4.MobileFormat \n5.Validate Password \n6.Validation of SampleMails \n7.Exit");
 
+                int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
@@ -55,6 +56,9 @@ namespace UserRegistrationProject
                         password.Checkpassward(passward);
                         break;
                     case 6:
+                        ValidationRegex.SampleEmail();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
