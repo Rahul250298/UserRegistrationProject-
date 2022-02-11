@@ -14,9 +14,10 @@ namespace UserRegistrationProject
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Validate Lastname " +
-                    "\n3. Validate EmailID \n4. MobileFormat \n5. Password Validation \n6. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
+                    "\n3. Validate EmailID \n4.MobileFormat \n5.Validate Password \n6. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
+
                 switch (option)
                 {
                     case 1:
@@ -50,8 +51,8 @@ namespace UserRegistrationProject
                     case 5:
                         Console.WriteLine("Enter Passward :");
                         string passward = Console.ReadLine();
-                        ValidationRegex passwardruleone = new ValidationRegex();
-                        passwardruleone.Checkpassward(passward);
+                        ValidationRegex password = new ValidationRegex();
+                        password.Checkpassward(passward);
                         break;
                     case 6:
                         flag = false;
@@ -67,4 +68,3 @@ namespace UserRegistrationProject
 
 
 }
-
