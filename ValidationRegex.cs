@@ -31,8 +31,18 @@ namespace UserRegistrationProject
             if (Regex.IsMatch(Emailid, emailpattern))
                 Console.WriteLine("Email id is valid");
             else
-                Console.WriteLine("Invalid name!!");
+                Console.WriteLine("Invalid email id!!");
         }
+        public void Checkmobilenum(string Mobilenum)
+        {
+            string mobilenumpattern = "^[1,9]{2}-[6-9]{1}[0-9]{9}";
+            if (Regex.IsMatch(Mobilenum, mobilenumpattern))
+                Console.WriteLine("Mobile number is valid");
+            else
+                Console.WriteLine("Invalid mobile number!!");
+        }
+
 
     }
 }
+
