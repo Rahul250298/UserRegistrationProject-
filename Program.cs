@@ -15,7 +15,7 @@ namespace UserRegistrationProject
             while (flag)
             {
                 Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
-                    "\n3. Exit");
+                    "\n3. Validate EmailID \n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +36,12 @@ namespace UserRegistrationProject
                         lnamepattern.Checklastname(lname);
                         break;
                     case 3:
+                        Console.WriteLine("Enter Email id :");
+                        string email = Console.ReadLine();
+                        ValidationRegex emailpattern = new ValidationRegex();
+                        emailpattern.Checkemail(email);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
@@ -50,4 +56,3 @@ namespace UserRegistrationProject
 
 }
 
-           
