@@ -14,7 +14,8 @@ namespace UserRegistrationProject
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
+                    "\n3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +28,14 @@ namespace UserRegistrationProject
                         Checkpattern.Checkfirstname(fname);
                         break;
                     case 2:
+                        Console.WriteLine("*First letter should be capital.");
+                        Console.WriteLine("*length should be Minimum three characters.");
+                        Console.WriteLine("Enter Last name :");
+                        string lname = Console.ReadLine();
+                        ValidationRegex lnamepattern = new ValidationRegex();
+                        lnamepattern.Checklastname(lname);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
@@ -40,3 +49,5 @@ namespace UserRegistrationProject
 
 
 }
+
+           
