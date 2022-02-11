@@ -11,13 +11,10 @@ namespace UserRegistrationProject
         static void Main(string[] args)
         {
             Console.WriteLine("hello welcome to user Registration");
-
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
-                    "\n3.Validate EmailID \n4.MobileFormat \n5.Validate Password \n6.Validation of SampleMails \n7.Exit");
-
+                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,35 +27,6 @@ namespace UserRegistrationProject
                         Checkpattern.Checkfirstname(fname);
                         break;
                     case 2:
-                        Console.WriteLine("*First letter should be capital.");
-                        Console.WriteLine("*length should be Minimum three characters.");
-                        Console.WriteLine("Enter Last name :");
-                        string lname = Console.ReadLine();
-                        ValidationRegex lnamepattern = new ValidationRegex();
-                        lnamepattern.Checklastname(lname);
-                        break;
-                    case 3:
-                        Console.WriteLine("Enter Email id :");
-                        string email = Console.ReadLine();
-                        ValidationRegex emailpattern = new ValidationRegex();
-                        emailpattern.Checkemail(email);
-                        break;
-                    case 4:
-                        Console.WriteLine("Enter Mobile No. :");
-                        string mobilenum = Console.ReadLine();
-                        ValidationRegex mobilenumpattern = new ValidationRegex();
-                        mobilenumpattern.Checkmobilenum(mobilenum);
-                        break;
-                    case 5:
-                        Console.WriteLine("Enter Passward :");
-                        string passward = Console.ReadLine();
-                        ValidationRegex password = new ValidationRegex();
-                        password.Checkpassward(passward);
-                        break;
-                    case 6:
-                        ValidationRegex.SampleEmail();
-                        break;
-                    case 7:
                         flag = false;
                         break;
                     default:
@@ -72,4 +40,3 @@ namespace UserRegistrationProject
 
 
 }
-
