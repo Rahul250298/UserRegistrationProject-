@@ -6,70 +6,64 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProject
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void UserRegistration()
         {
-            Console.WriteLine("hello welcome to user Registration");
-
-            bool flag = true;
-            while (flag)
+            bool Continue = true;
+            while (Continue)
             {
-                Console.WriteLine("\n Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
-                    "\n3.Validate EmailID \n4.MobileFormat \n5.Validate Password \n6.Validation of SampleMails \n7.Exit");
-
-                int option = Convert.ToInt32(Console.ReadLine());
-                switch (option)
+                Console.WriteLine("\nChoose Option to Validate with their specified Pattern");
+                Console.WriteLine("1 = First Name\n2 = Last Name\n3 = Email ID\n4 = Mobile Number\n5 = Password\n6 = Sample Email Check\n0 = Exit");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
                 {
+                    case 0:
+                        Continue = false;
+                        break;
                     case 1:
-                        Console.WriteLine("*First letter should be capital.");
-                        Console.WriteLine("*length should be Minimum three characters.");
-                        Console.WriteLine("Enter First name :");
-                        string fname = Console.ReadLine();
-                        ValidationRegex Checkpattern = new ValidationRegex();
-                        Checkpattern.Checkfirstname(fname);
+                        Console.WriteLine("Enter First Name");
+                        string firstName = Console.ReadLine();
+                        Console.WriteLine(ValidationRegex.ValidateFirstName(firstName));
                         break;
                     case 2:
-                        Console.WriteLine("*First letter should be capital.");
-                        Console.WriteLine("*length should be Minimum three characters.");
-                        Console.WriteLine("Enter Last name :");
-                        string lname = Console.ReadLine();
-                        ValidationRegex lnamepattern = new ValidationRegex();
-                        lnamepattern.Checklastname(lname);
+                        Console.WriteLine("Enter Last Name");
+                        string lastName = Console.ReadLine();;
+                        Console.WriteLine(ValidationRegex.ValidateFirstName(lastName));
+                        Console.WriteLine((lastName));
                         break;
                     case 3:
-                        Console.WriteLine("Enter Email id :");
+                        Console.WriteLine("Enter Email ID");
                         string email = Console.ReadLine();
-                        ValidationRegex emailpattern = new ValidationRegex();
-                        emailpattern.Checkemail(email);
+                        Console.WriteLine(ValidationRegex.ValidateFirstName(email));
+ 
                         break;
                     case 4:
-                        Console.WriteLine("Enter Mobile No. :");
-                        string mobilenum = Console.ReadLine();
-                        ValidationRegex mobilenumpattern = new ValidationRegex();
-                        mobilenumpattern.Checkmobilenum(mobilenum);
+                        Console.WriteLine("Enter Mobile Number");
+                        string mobileNumber = Console.ReadLine();
+                        Console.WriteLine(ValidationRegex.ValidateMobileNumber(mobileNumber));
                         break;
                     case 5:
-                        Console.WriteLine("Enter Passward :");
-                        string passward = Console.ReadLine();
-                        ValidationRegex password = new ValidationRegex();
-                        password.Checkpassward(passward);
+                        Console.WriteLine("Enter PassWord");
+                        string password = Console.ReadLine();
+                        Console.WriteLine(ValidationRegex.ValidatePassword(password));
                         break;
                     case 6:
                         ValidationRegex.SampleEmail();
                         break;
-                    case 7:
-                        flag = false;
-                        break;
                     default:
-                        Console.WriteLine("invalid option");
+                        Console.WriteLine("Enter Correct Option!");
                         break;
                 }
             }
+        }
+        //Program Entry Point
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to User Registration Program");
+            UserRegistration();
             Console.ReadLine();
         }
     }
-
-
 }
 

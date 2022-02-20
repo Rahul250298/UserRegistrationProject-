@@ -1,0 +1,8 @@
+C:\Users\uknwr\repos\UserRegistrationProject\bin\Debug\UserRegistrationProject.exe.config
+C:\Users\uknwr\repos\UserRegistrationProject\bin\Debug\UserRegistrationProject.exe
+C:\Users\uknwr\repos\UserRegistrationProject\bin\Debug\UserRegistrationProject.pdb
+C:\Users\uknwr\repos\UserRegistrationProject\obj\Debug\UserRegistrationProject.csproj.AssemblyReference.cache
+C:\Users\uknwr\repos\UserRegistrationProject\obj\Debug\UserRegistrationProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\uknwr\repos\UserRegistrationProject\obj\Debug\UserRegistrationProject.csproj.CoreCompileInputs.cache
+C:\Users\uknwr\repos\UserRegistrationProject\obj\Debug\UserRegistrationProject.exe
+C:\Users\uknwr\repos\UserRegistrationProject\obj\Debug\UserRegistrationProject.pdb
