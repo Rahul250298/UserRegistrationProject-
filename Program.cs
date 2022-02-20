@@ -57,6 +57,13 @@ namespace UserRegistrationProject
                 }
             }
         }
+        public static void LambdaValidate()
+        {
+            LambdaValidation.ValidateFirstName();
+            LambdaValidation.ValidateLastName();
+            LambdaValidation.ValidateMobileNumber();
+            LambdaValidation.ValidateEmail();
+        }
         //Program Entry Point
         static void Main(string[] args)
         {
